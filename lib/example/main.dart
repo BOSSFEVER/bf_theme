@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bf_theme/theme/bf_color.dart';
 import 'package:bf_theme/theme/bf_theme.dart';
-import 'package:bf_theme/theme/theme_extension.dart';
 import 'package:bf_theme/widgets/bf_button.dart';
 import 'package:bf_theme/widgets/bf_toggle_button.dart';
 import 'package:flutter/material.dart';
@@ -142,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                   DropdownMenuItem(value: 3, child: Text("km")),
                 ],
                 value: 0,
-                onChanged: (s) => print("CHANGED TO $s"),
+                onChanged: (s) {},
               ),
               const SizedBox(height: 32),
               const Center(child: AllButtons()),
