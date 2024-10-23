@@ -1,6 +1,6 @@
 {
-    "name": "boring_theme",
-    "short_name": "boring_theme",
+    "name": "bf_theme",
+    "short_name": "bf_theme",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

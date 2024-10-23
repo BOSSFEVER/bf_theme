@@ -1,3 +1,3 @@
 # bf_theme
 
-A theme, that is boring.
+A theme, that is bf.

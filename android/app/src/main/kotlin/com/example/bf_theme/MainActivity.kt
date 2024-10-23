@@ -1,4 +1,4 @@
-package com.example.boring_theme
+package com.example.bf_theme
 
 import io.flutter.embedding.android.FlutterActivity
 
