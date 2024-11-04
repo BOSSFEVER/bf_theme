@@ -1,24 +1,34 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:bf_theme/theme/bf_color.dart';
 import 'package:bf_theme/theme/bf_theme.dart';
 import 'package:bf_theme/widgets/bf_button.dart';
 import 'package:bf_theme/widgets/bf_toggle_button.dart';
 import 'package:flutter/material.dart';
+import 'package:window_manager/window_manager.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'app.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    WindowManager.instance.setTitle('BF Theme Demo');
+    WindowManager.instance.setMinimumSize(const Size(800, 500));
+  }
+  runApp(const BFThemeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BFThemeApp extends StatelessWidget {
+  const BFThemeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: BFTheme.createDarkTheme(),
-      home: const HomePage(),
+      home: const App(),
     );
   }
 }
@@ -63,6 +73,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('BF Theme'),
+      ),
+      drawer: NavigationDrawer(
+        selectedIndex: 0,
+        children: [
+          NavigationDrawerDestination(
+            icon: Icon(Icons.ads_click),
+            label: const Text('Buttons'),
+          ),
+          NavigationDrawerDestination(
+            icon: Icon(Icons.person),
+            label: const Text('The Rest'),
+          ),
+          NavigationDrawerDestination(
+            icon: Icon(Icons.water_drop),
+            label: const Text('Even More'),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -161,7 +191,7 @@ class AllButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         Column(
@@ -258,6 +288,7 @@ class AllButtons extends StatelessWidget {
               child: BFButton(
                 onPressed: noFunc,
                 colorPack: BFColorPack.red,
+                width: 90,
                 icon: Icons.check,
                 child: Text("Red"),
               ),

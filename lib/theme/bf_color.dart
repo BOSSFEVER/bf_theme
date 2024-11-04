@@ -48,9 +48,9 @@ class BFColorPack {
   );
 
   static const cyan = BFColorPack(
-    Color(0xFF11857B),
-    Color(0xFF11857B),
-    Color(0xFF11857B),
+    Color(0xFF128A8D),
+    Color(0xFF128A8D),
+    Color(0xFF128A8D),
   );
 
   static const jade = BFColorPack(
@@ -102,20 +102,20 @@ class BFColorPack {
   );
 
   static const steel = BFColorPack(
-    Color(0xFF444A5E),
-    Color(0xFF444A5E),
-    Color(0xFF444A5E),
+    Color(0xFF4E546C),
+    Color(0xFF4E546C),
+    Color(0xFF4E546C),
   );
 
   static const ash = BFColorPack(
-    Color(0xFF5D564B),
-    Color(0xFF5D564B),
-    Color(0xFF5D564B),
+    Color(0xFF655E53),
+    Color(0xFF655E53),
+    Color(0xFF655E53),
   );
 
   static const brown = BFColorPack(
-    Color(0xFF46280A),
-    Color(0xFF46280A),
-    Color(0xFF46280A),
+    Color(0xFF52310E),
+    Color(0xFF52310E),
+    Color(0xFF52310E),
   );
 }
