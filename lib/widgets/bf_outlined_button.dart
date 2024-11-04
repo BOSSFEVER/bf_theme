@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../theme/bf_theme.dart';
-import '../theme/bf_color.dart';
 
-class BFButton extends StatelessWidget {
-  const BFButton({
+import '../theme/bf_color.dart';
+import '../theme/bf_theme.dart';
+
+class BfOutlinedButton extends StatelessWidget {
+  const BfOutlinedButton({
     super.key,
     required this.onPressed,
     required this.child,
@@ -42,8 +43,8 @@ class BFButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ButtonStyle buttonStyle =
-        BFTheme.createButtonStyle(colorPack: colorPack ?? BFColorPack.indigo);
+    ButtonStyle buttonStyle = BFTheme.createOutlinedButtonStyle(
+        colorPack: colorPack ?? BFColorPack.indigo);
 
     if (icon != null) {
       buttonStyle = buttonStyle.copyWith(

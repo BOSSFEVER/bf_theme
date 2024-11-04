@@ -1,7 +1,8 @@
+import 'package:bf_theme/theme/bf_outlined_button_style.dart';
 import 'package:flutter/material.dart';
 
-import 'bf_button_style.dart';
 import 'bf_color.dart';
+import 'bf_filled_button_style.dart';
 
 class BFTheme {
   const BFTheme._noConstructor();
@@ -17,8 +18,12 @@ class BFTheme {
       cardTheme: const CardTheme(
         color: Color(0xFF232323),
       ),
-      elevatedButtonTheme: ElevatedButtonThemeData(style: createButtonStyle()),
-      // filledButtonTheme: FilledButtonThemeData(style: BFButtonStyle()),
+      elevatedButtonTheme:
+          ElevatedButtonThemeData(style: createFilledButtonStyle()),
+      filledButtonTheme:
+          FilledButtonThemeData(style: createFilledButtonStyle()),
+      outlinedButtonTheme:
+          OutlinedButtonThemeData(style: createOutlinedButtonStyle()),
       checkboxTheme: CheckboxThemeData(
         visualDensity: const VisualDensity(horizontal: 1, vertical: 1),
         materialTapTargetSize: MaterialTapTargetSize.padded,
@@ -42,8 +47,13 @@ class BFTheme {
     );
   }
 
-  static ButtonStyle createButtonStyle(
+  static ButtonStyle createFilledButtonStyle(
       {BFColorPack colorPack = BFColorPack.indigo}) {
-    return createBFButtonStyle(colorPack: colorPack);
+    return createBFFilledButtonStyle(colorPack: colorPack);
+  }
+
+  static ButtonStyle createOutlinedButtonStyle(
+      {BFColorPack colorPack = BFColorPack.indigo}) {
+    return createBFOutlinedButtonStyle(colorPack: colorPack);
   }
 }

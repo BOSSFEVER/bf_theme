@@ -1,5 +1,6 @@
 import 'package:bf_theme/bf_theme.dart';
 import 'package:bf_theme/example/colorpack_helper.dart';
+import 'package:bf_theme/widgets/bf_outlined_button.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {
@@ -23,7 +24,7 @@ class ButtonsScreen extends StatelessWidget {
               runSpacing: 8,
               children: [
                 for (ColorData data in colorDataList)
-                  BFButton(
+                  BFFilledButton(
                     onPressed: () {},
                     colorPack: data.colorPack,
                     child: Text(data.name),
@@ -40,37 +41,37 @@ class ButtonsScreen extends StatelessWidget {
               spacing: 8,
               runSpacing: 8,
               children: [
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.green,
                   icon: Icons.check,
                   child: const Text('Accept'),
                 ),
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.red,
                   icon: Icons.close,
                   child: const Text('Cancel'),
                 ),
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.blue,
                   icon: Icons.add,
                   child: const Text('Add User'),
                 ),
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.orange,
                   icon: Icons.cached,
                   child: const Text('Refresh'),
                 ),
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.berry,
                   icon: Icons.favorite_border,
                   child: const Text('Favorite'),
                 ),
-                BFButton(
+                BFFilledButton(
                   onPressed: () {},
                   colorPack: BFColorPack.purple,
                   icon: Icons.notifications_active_outlined,
@@ -89,7 +90,7 @@ class ButtonsScreen extends StatelessWidget {
               runSpacing: 8,
               children: [
                 for (ColorData data in colorDataList)
-                  BFButton(
+                  BfOutlinedButton(
                     onPressed: () {},
                     colorPack: data.colorPack,
                     child: Text(data.name),

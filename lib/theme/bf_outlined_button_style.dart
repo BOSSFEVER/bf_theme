@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'bf_color.dart';
 
-ButtonStyle createBFButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFOutlinedButtonStyle(
+    {BFColorPack colorPack = BFColorPack.indigo}) {
   return ButtonStyle(
     animationDuration: const Duration(milliseconds: 75),
     splashFactory: NoSplash.splashFactory,
@@ -17,6 +18,8 @@ ButtonStyle createBFButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
         ),
       ),
     ),
+    overlayColor: const WidgetStatePropertyAll(Colors.transparent),
+    shadowColor: const WidgetStatePropertyAll(Colors.transparent),
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
       if (state.contains(WidgetState.hovered)) {
@@ -29,7 +32,13 @@ ButtonStyle createBFButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
         color = BFExtraColors.disabled;
       }
       return AnimatedContainer(
-        color: color,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+            border: Border.all(
+              color: color,
+              width: 2,
+              strokeAlign: BorderSide.strokeAlignInside,
+            )),
         duration: const Duration(milliseconds: 75),
         child: widget,
       );
