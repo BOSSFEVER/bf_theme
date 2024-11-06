@@ -1,6 +1,7 @@
 import 'package:bf_theme/bf_theme.dart';
 import 'package:bf_theme/example/colorpack_helper.dart';
 import 'package:bf_theme/widgets/bf_outlined_button.dart';
+import 'package:bf_theme/widgets/bf_text_button.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class ButtonsScreen extends StatelessWidget {
               children: [
                 for (ColorData data in colorDataList)
                   BFFilledButton(
-                    onPressed: () {},
+                    onPressed: data.function,
                     colorPack: data.colorPack,
                     child: Text(data.name),
                   ),
@@ -41,42 +42,13 @@ class ButtonsScreen extends StatelessWidget {
               spacing: 8,
               runSpacing: 8,
               children: [
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.green,
-                  icon: Icons.check,
-                  child: const Text('Accept'),
-                ),
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.red,
-                  icon: Icons.close,
-                  child: const Text('Cancel'),
-                ),
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.blue,
-                  icon: Icons.add,
-                  child: const Text('Add User'),
-                ),
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.orange,
-                  icon: Icons.cached,
-                  child: const Text('Refresh'),
-                ),
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.berry,
-                  icon: Icons.favorite_border,
-                  child: const Text('Favorite'),
-                ),
-                BFFilledButton(
-                  onPressed: () {},
-                  colorPack: BFColorPack.purple,
-                  icon: Icons.notifications_active_outlined,
-                  child: const Text('Subscribe'),
-                ),
+                for (IconColorData data in iconColorDataList)
+                  BFFilledButton(
+                    onPressed: data.function,
+                    colorPack: data.colorPack,
+                    icon: data.icon,
+                    child: Text(data.name),
+                  ),
               ],
             ),
             SizedBox(height: 32),
@@ -91,8 +63,64 @@ class ButtonsScreen extends StatelessWidget {
               children: [
                 for (ColorData data in colorDataList)
                   BfOutlinedButton(
-                    onPressed: () {},
+                    onPressed: data.function,
                     colorPack: data.colorPack,
+                    child: Text(data.name),
+                  ),
+              ],
+            ),
+            SizedBox(height: 32),
+            Text(
+              'BF Outlined Button with Icon',
+              style: context.theme.textTheme.titleMedium,
+            ),
+            SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (IconColorData data in iconColorDataList)
+                  BfOutlinedButton(
+                    onPressed: data.function,
+                    colorPack: data.colorPack,
+                    icon: data.icon,
+                    child: Text(data.name),
+                  ),
+              ],
+            ),
+            SizedBox(height: 32),
+            Text(
+              'BF Text Button',
+              style: context.theme.textTheme.titleMedium,
+            ),
+            SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (ColorData data in colorDataList)
+                  BFTextButton(
+                    onPressed: data.function,
+                    colorPack: data.colorPack,
+                    child: Text(data.name),
+                  ),
+              ],
+            ),
+            SizedBox(height: 32),
+            Text(
+              'BF Filled Button with Icon',
+              style: context.theme.textTheme.titleMedium,
+            ),
+            SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (IconColorData data in iconColorDataList)
+                  BFTextButton(
+                    onPressed: data.function,
+                    colorPack: data.colorPack,
+                    icon: data.icon,
                     child: Text(data.name),
                   ),
               ],
