@@ -43,8 +43,7 @@ class BFTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ButtonStyle buttonStyle = BFTheme.createTextButtonStyle(
-        colorPack: colorPack ?? BFColorPack.indigo);
+    ButtonStyle buttonStyle = BFTheme.createTextButtonStyle(colorPack: colorPack ?? BFColorPacks.indigo);
 
     if (icon != null) {
       buttonStyle = buttonStyle.copyWith(

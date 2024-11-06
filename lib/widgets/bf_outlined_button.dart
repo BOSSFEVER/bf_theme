@@ -43,7 +43,7 @@ class BFOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ButtonStyle buttonStyle = BFTheme.createOutlinedButtonStyle(colorPack: colorPack ?? BFColorPack.indigo);
+    ButtonStyle buttonStyle = BFTheme.createOutlinedButtonStyle(colorPack: colorPack ?? BFColorPacks.indigo);
 
     if (icon != null) {
       buttonStyle = buttonStyle.copyWith(

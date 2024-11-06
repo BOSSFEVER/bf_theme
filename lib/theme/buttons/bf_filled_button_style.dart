@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../bf_color.dart';
 import 'bf_general_button_style.dart';
 
-ButtonStyle createBFFilledButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFFilledButtonStyle({BFColorPack colorPack = BFColorPacks.indigo}) {
   return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
@@ -14,7 +14,7 @@ ButtonStyle createBFFilledButtonStyle({BFColorPack colorPack = BFColorPack.indig
         color = colorPack.click;
       }
       if (state.contains(WidgetState.disabled)) {
-        color = BFExtraColors.disabled;
+        color = BFColors.disabled;
       }
       return AnimatedContainer(
         padding: EdgeInsets.all(2),

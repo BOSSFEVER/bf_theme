@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../bf_color.dart';
 import 'bf_general_button_style.dart';
 
-ButtonStyle createBFTextButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFTextButtonStyle({BFColorPack colorPack = BFColorPacks.indigo}) {
   return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
@@ -17,7 +17,7 @@ ButtonStyle createBFTextButtonStyle({BFColorPack colorPack = BFColorPack.indigo}
         opacity = 0.2;
       }
       if (state.contains(WidgetState.disabled)) {
-        color = BFExtraColors.disabled;
+        color = BFColors.disabled;
         opacity = 0;
       }
       return AnimatedContainer(
@@ -35,7 +35,7 @@ ButtonStyle createBFTextButtonStyle({BFColorPack colorPack = BFColorPack.indigo}
         return colorPack.click;
       }
       if (state.contains(WidgetState.disabled)) {
-        return BFExtraColors.disabled;
+        return BFColors.disabled;
       }
       return colorPack.hover;
     }),

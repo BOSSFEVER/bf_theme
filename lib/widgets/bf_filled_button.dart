@@ -43,8 +43,7 @@ class BFFilledButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ButtonStyle buttonStyle = BFTheme.createFilledButtonStyle(
-        colorPack: colorPack ?? BFColorPack.indigo);
+    ButtonStyle buttonStyle = BFTheme.createFilledButtonStyle(colorPack: colorPack ?? BFColorPacks.indigo);
 
     if (icon != null) {
       buttonStyle = buttonStyle.copyWith(

@@ -136,17 +136,17 @@ class ButtonsScreen extends StatelessWidget {
               children: [
                 BFTextButton(
                   onPressed: () {},
-                  colorPack: BFColorPack.cyan,
+                  colorPack: BFColorPacks.cyan,
                   child: Text('One'),
                 ),
                 BFOutlinedButton(
                   onPressed: () {},
-                  colorPack: BFColorPack.cyan,
+                  colorPack: BFColorPacks.cyan,
                   child: Text('Two'),
                 ),
                 BFFilledButton(
                   onPressed: () {},
-                  colorPack: BFColorPack.cyan,
+                  colorPack: BFColorPacks.cyan,
                   child: Text('Three'),
                 ),
               ],

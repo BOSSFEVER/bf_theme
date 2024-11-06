@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../bf_color.dart';
 
-ButtonStyle createBFOutlinedButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFOutlinedButtonStyle({BFColorPack colorPack = BFColorPacks.indigo}) {
   return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
@@ -17,7 +17,7 @@ ButtonStyle createBFOutlinedButtonStyle({BFColorPack colorPack = BFColorPack.ind
         opacity = 0.3;
       }
       if (state.contains(WidgetState.disabled)) {
-        color = BFExtraColors.disabled;
+        color = BFColors.disabled;
         opacity = 0.2;
       }
       return AnimatedContainer(
