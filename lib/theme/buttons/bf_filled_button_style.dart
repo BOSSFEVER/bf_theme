@@ -1,23 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'bf_color.dart';
+import '../bf_color.dart';
+import 'bf_general_button_style.dart';
 
 ButtonStyle createBFFilledButtonStyle(
     {BFColorPack colorPack = BFColorPack.indigo}) {
-  return ButtonStyle(
-    animationDuration: const Duration(milliseconds: 75),
-    splashFactory: NoSplash.splashFactory,
-    backgroundColor: const WidgetStatePropertyAll(Colors.transparent),
-    padding: const WidgetStatePropertyAll(
-      EdgeInsets.all(16),
-    ),
-    shape: const WidgetStatePropertyAll(
-      RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(6),
-        ),
-      ),
-    ),
+  return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
       if (state.contains(WidgetState.hovered)) {

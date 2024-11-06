@@ -1,8 +1,9 @@
-import 'package:bf_theme/theme/bf_outlined_button_style.dart';
+import 'package:bf_theme/theme/buttons/bf_outlined_button_style.dart';
+import 'package:bf_theme/theme/buttons/bf_text_button_style.dart';
 import 'package:flutter/material.dart';
 
 import 'bf_color.dart';
-import 'bf_filled_button_style.dart';
+import 'buttons/bf_filled_button_style.dart';
 
 class BFTheme {
   const BFTheme._noConstructor();
@@ -24,6 +25,7 @@ class BFTheme {
           FilledButtonThemeData(style: createFilledButtonStyle()),
       outlinedButtonTheme:
           OutlinedButtonThemeData(style: createOutlinedButtonStyle()),
+      textButtonTheme: TextButtonThemeData(style: createTextButtonStyle()),
       checkboxTheme: CheckboxThemeData(
         visualDensity: const VisualDensity(horizontal: 1, vertical: 1),
         materialTapTargetSize: MaterialTapTargetSize.padded,
@@ -55,5 +57,10 @@ class BFTheme {
   static ButtonStyle createOutlinedButtonStyle(
       {BFColorPack colorPack = BFColorPack.indigo}) {
     return createBFOutlinedButtonStyle(colorPack: colorPack);
+  }
+
+  static ButtonStyle createTextButtonStyle(
+      {BFColorPack colorPack = BFColorPack.indigo}) {
+    return createBFTextButtonStyle(colorPack: colorPack);
   }
 }
