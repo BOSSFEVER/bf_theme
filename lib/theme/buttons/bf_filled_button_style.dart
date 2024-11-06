@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../bf_color.dart';
 import 'bf_general_button_style.dart';
 
-ButtonStyle createBFFilledButtonStyle(
-    {BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFFilledButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
   return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
@@ -18,6 +17,7 @@ ButtonStyle createBFFilledButtonStyle(
         color = BFExtraColors.disabled;
       }
       return AnimatedContainer(
+        padding: EdgeInsets.all(2),
         color: color,
         duration: const Duration(milliseconds: 75),
         child: widget,

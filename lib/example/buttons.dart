@@ -62,7 +62,7 @@ class ButtonsScreen extends StatelessWidget {
               runSpacing: 8,
               children: [
                 for (ColorData data in colorDataList)
-                  BfOutlinedButton(
+                  BFOutlinedButton(
                     onPressed: data.function,
                     colorPack: data.colorPack,
                     child: Text(data.name),
@@ -80,7 +80,7 @@ class ButtonsScreen extends StatelessWidget {
               runSpacing: 8,
               children: [
                 for (IconColorData data in iconColorDataList)
-                  BfOutlinedButton(
+                  BFOutlinedButton(
                     onPressed: data.function,
                     colorPack: data.colorPack,
                     icon: data.icon,
@@ -123,6 +123,32 @@ class ButtonsScreen extends StatelessWidget {
                     icon: data.icon,
                     child: Text(data.name),
                   ),
+              ],
+            ),
+            SizedBox(height: 32),
+            Text(
+              'Combo of all 3 Button Types',
+              style: context.theme.textTheme.titleMedium,
+            ),
+            SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              children: [
+                BFTextButton(
+                  onPressed: () {},
+                  colorPack: BFColorPack.cyan,
+                  child: Text('One'),
+                ),
+                BFOutlinedButton(
+                  onPressed: () {},
+                  colorPack: BFColorPack.cyan,
+                  child: Text('Two'),
+                ),
+                BFFilledButton(
+                  onPressed: () {},
+                  colorPack: BFColorPack.cyan,
+                  child: Text('Three'),
+                ),
               ],
             ),
           ],

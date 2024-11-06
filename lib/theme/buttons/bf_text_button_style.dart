@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../bf_color.dart';
 import 'bf_general_button_style.dart';
 
-ButtonStyle createBFTextButtonStyle(
-    {BFColorPack colorPack = BFColorPack.indigo}) {
+ButtonStyle createBFTextButtonStyle({BFColorPack colorPack = BFColorPack.indigo}) {
   return createBFGeneralButtonStyle().copyWith(
     backgroundBuilder: (context, state, widget) {
       Color color = colorPack.background;
@@ -22,6 +21,7 @@ ButtonStyle createBFTextButtonStyle(
         opacity = 0;
       }
       return AnimatedContainer(
+        padding: EdgeInsets.all(2),
         color: color.withOpacity(opacity),
         duration: const Duration(milliseconds: 75),
         child: widget,
