@@ -14,7 +14,7 @@ class BFTheme {
     return ThemeData(
       useMaterial3: true,
       primaryColor: Colors.blue,
-      canvasColor: Colors.red,
+      canvasColor: BFColors.background,
       scaffoldBackgroundColor: BFColors.background,
       textTheme: ThemeData.dark().textTheme,
       cardTheme: bfCardTheme,
