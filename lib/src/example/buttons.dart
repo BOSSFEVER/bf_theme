@@ -1,7 +1,7 @@
 import 'package:bf_theme/bf_theme.dart';
-import 'package:bf_theme/example/colorpack_helper.dart';
-import 'package:bf_theme/widgets/bf_outlined_button.dart';
-import 'package:bf_theme/widgets/bf_text_button.dart';
+import 'package:bf_theme/src/example/colorpack_helper.dart';
+import 'package:bf_theme/src/widgets/bf_outlined_button.dart';
+import 'package:bf_theme/src/widgets/bf_text_button.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:bf_theme/theme/theme_extension.dart';
+import 'package:bf_theme/src/theme/theme_extension.dart';
 import 'package:flutter/material.dart';
 
 class BFToggleButton extends StatefulWidget {
@@ -37,10 +37,7 @@ class _BFToggleButtonState extends State<BFToggleButton> {
           if (!activated && state.contains(WidgetState.pressed)) {
             color = Colors.grey.shade600;
           }
-          return AnimatedContainer(
-              color: color,
-              duration: const Duration(milliseconds: 75),
-              child: widget);
+          return AnimatedContainer(color: color, duration: const Duration(milliseconds: 75), child: widget);
         },
         foregroundColor: WidgetStateProperty.resolveWith((state) {
           if (!activated) {
@@ -52,8 +49,7 @@ class _BFToggleButtonState extends State<BFToggleButton> {
           return Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(activated ? Icons.file_copy : Icons.file_copy_outlined,
-                  size: 21),
+              Icon(activated ? Icons.file_copy : Icons.file_copy_outlined, size: 21),
               const SizedBox(width: 8),
               widget!,
             ],

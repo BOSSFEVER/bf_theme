@@ -1,4 +1,4 @@
-import 'package:bf_theme/theme/buttons/bf_general_button_style.dart';
+import 'package:bf_theme/src/theme/buttons/bf_general_button_style.dart';
 import 'package:flutter/material.dart';
 
 import '../bf_color.dart';

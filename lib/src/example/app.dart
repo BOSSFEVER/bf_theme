@@ -1,5 +1,6 @@
-import 'package:bf_theme/example/buttons.dart';
 import 'package:flutter/material.dart';
+
+import 'buttons.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
