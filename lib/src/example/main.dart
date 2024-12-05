@@ -1,21 +1,10 @@
-import 'dart:io';
-
-import 'package:bf_theme/src/theme/bf_theme.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:window_manager/window_manager.dart';
 
+import '../../bf_theme.dart';
 import 'app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (!kIsWeb) {
-    if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      await windowManager.ensureInitialized();
-      WindowManager.instance.setTitle('BF Theme Demo');
-      WindowManager.instance.setMinimumSize(const Size(800, 500));
-    }
-  }
   runApp(const BFThemeApp());
 }
 

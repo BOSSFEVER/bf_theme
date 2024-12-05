@@ -47,7 +47,7 @@ class _AppState extends State<App> {
           0 => ButtonsScreen(),
           _ => Placeholder(
               strokeWidth: 3,
-              color: Colors.redAccent,
+              color: Colors.green,
             ),
         },
       ),

@@ -12,7 +12,7 @@ class ColorData {
   final void Function()? function;
 }
 
-const List<ColorData> colorDataList = [
+final List<ColorData> colorDataList = [
   ColorData("Red", BFColorPacks.red, empty),
   ColorData("Berry", BFColorPacks.berry, empty),
   ColorData("Pink", BFColorPacks.pink, empty),
@@ -43,7 +43,7 @@ class IconColorData {
   final IconData icon;
 }
 
-const List<IconColorData> iconColorDataList = [
+final List<IconColorData> iconColorDataList = [
   IconColorData("Accept", BFColorPacks.green, Icons.check, empty),
   IconColorData("Cancel", BFColorPacks.red, Icons.close, empty),
   IconColorData("Power", BFColorPacks.yellow, Icons.electric_bolt, empty),
