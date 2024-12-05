@@ -35,13 +35,15 @@ class _BFButtonState extends State<BFButton> {
 
   @override
   Widget build(BuildContext context) {
+    final bool activated = widget.onPressed != null;
+
     return MouseRegion(
       onEnter: (_) => setState(() => hovering = true),
       onExit: (_) => setState(() {
         hovering = false;
         clicking = false;
       }),
-      cursor: SystemMouseCursors.click,
+      cursor: activated ? SystemMouseCursors.click : MouseCursor.defer,
       child: GestureDetector(
         onTap: widget.onPressed,
         onTapDown: (_) => setState(() => clicking = true),
@@ -51,11 +53,13 @@ class _BFButtonState extends State<BFButton> {
           width: widget.width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: clicking
-                ? widget.colorPack.click
-                : hovering
-                    ? widget.colorPack.hover
-                    : widget.colorPack.background,
+            color: activated
+                ? clicking
+                    ? widget.colorPack.click
+                    : hovering
+                        ? widget.colorPack.hover
+                        : widget.colorPack.background
+                : BFColors.disabled,
           ),
           child: Padding(
             padding:
@@ -64,11 +68,11 @@ class _BFButtonState extends State<BFButton> {
               mainAxisSize: widget.mainAxisSize,
               mainAxisAlignment: widget.mainAxisAlignment,
               children: [
-                if (widget.leading != null) Icon(widget.leading, size: 21, color: Colors.white),
+                if (widget.leading != null) Icon(widget.leading, size: 21, color: activated ? Colors.white : Colors.grey.shade600),
                 if (widget.leading != null) const SizedBox(width: 8),
-                widget.child,
+                DefaultTextStyle(style: TextStyle(color: activated ? Colors.white : Colors.grey.shade600), child: widget.child),
                 if (widget.trailing != null) const SizedBox(width: 8),
-                if (widget.trailing != null) Icon(widget.trailing, size: 21, color: Colors.white),
+                if (widget.trailing != null) Icon(widget.trailing, size: 21, color: activated ? Colors.white : Colors.grey.shade600),
               ],
             ),
           ),
