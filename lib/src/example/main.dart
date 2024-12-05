@@ -17,6 +17,7 @@ class BFThemeApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: BFTheme.createDarkTheme(),
       home: const App(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

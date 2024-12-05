@@ -5,4 +5,5 @@ import '../bf_color.dart';
 const bfAppBarTheme = AppBarTheme(
   color: BFColors.widgetBackground,
   foregroundColor: BFColors.foreground,
+  surfaceTintColor: Colors.transparent,
 );
