@@ -70,7 +70,7 @@ class _BFButtonState extends State<BFButton> {
               children: [
                 if (widget.leading != null) Icon(widget.leading, size: 21, color: activated ? Colors.white : Colors.grey.shade600),
                 if (widget.leading != null) const SizedBox(width: 8),
-                DefaultTextStyle(style: TextStyle(color: activated ? Colors.white : Colors.grey.shade600), child: widget.child),
+                DefaultTextStyle.merge(style: TextStyle(color: activated ? Colors.white : Colors.grey.shade600), child: widget.child),
                 if (widget.trailing != null) const SizedBox(width: 8),
                 if (widget.trailing != null) Icon(widget.trailing, size: 21, color: activated ? Colors.white : Colors.grey.shade600),
               ],

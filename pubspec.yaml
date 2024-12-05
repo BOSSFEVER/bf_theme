@@ -2,7 +2,7 @@ name: bf_theme
 description: "BOSSFEVER flutter theme."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 0.0.1-alpha.5
+version: 0.0.1-alpha.6
 
 environment:
   sdk: ^3.5.3
@@ -19,3 +19,34 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: fonts/Ubuntu/Ubuntu-Regular.ttf
+          weight: 400
+        - asset: fonts/Ubuntu/Ubuntu-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: fonts/Ubuntu/Ubuntu-Bold.ttf
+          weight: 700
+        - asset: fonts/Ubuntu/Ubuntu-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: fonts/Ubuntu/Ubuntu-Light.ttf
+          weight: 300
+        - asset: fonts/Ubuntu/Ubuntu-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/Ubuntu/Ubuntu-Medium.ttf
+          weight: 500
+        - asset: fonts/Ubuntu/Ubuntu-MediumItalic.ttf
+          weight: 500
+          style: italic
+    - family: Ubuntu Condensed
+      fonts:
+        - asset: fonts/Ubuntu_Condensed/UbuntuCondensed-Regular.ttf
+    - family: Ubuntu Sans
+      fonts:
+        - asset: fonts/Ubuntu_Sans/UbuntuSans.ttf
+        - asset: fonts/Ubuntu_Sans/UbuntuSans-Italic.ttf
+          style: italic
