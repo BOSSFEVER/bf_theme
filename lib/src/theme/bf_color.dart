@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BFColors {
-  BFColors._noConstructor();
-
+abstract final class BFColors {
   static const disabled = Color(0xFF242424);
   static const background = Color(0xFF121212);
   static const widgetBackground = Color(0xFF202020);
@@ -17,7 +15,7 @@ class BFColorPack {
   final Color click;
 }
 
-class BFColorPacks {
+abstract final class BFColorPacks {
   static const red = BFColorPack(
     Color(0xff8d0909),
     Color(0xffb02d2d),
