@@ -1,4 +1,6 @@
 // Macro
+library bf_theme;
+
 // Theme & Colors
 export 'theme/bf_color.dart' show BFColorPacks, BFColors;
 export 'theme/bf_theme.dart' show BFTheme;
