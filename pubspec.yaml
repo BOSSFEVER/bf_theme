@@ -2,7 +2,7 @@ name: bf_theme
 description: "BOSSFEVER flutter theme."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 0.0.1-alpha.2
+version: 0.0.1-alpha.3
 
 environment:
   sdk: ^3.5.3
