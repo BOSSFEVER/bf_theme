@@ -16,7 +16,7 @@ class ButtonsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'BF Filled Buttons => <=',
+              'BF Filled Buttons',
               style: context.theme.textTheme.titleMedium,
             ),
             SizedBox(height: 8),

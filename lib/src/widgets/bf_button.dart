@@ -1,4 +1,5 @@
 import 'package:bf_theme/bf_theme.dart';
+import 'package:bf_theme/src/theme/config.dart';
 import 'package:flutter/material.dart';
 
 class BFButton extends StatefulWidget {
@@ -6,7 +7,7 @@ class BFButton extends StatefulWidget {
     super.key,
     required this.child,
     required this.onPressed,
-    this.colorPack = BFColorPacks.indigo,
+    this.colorPack = Config.defaultColorPack,
     this.leading,
     this.trailing,
     this.height,
