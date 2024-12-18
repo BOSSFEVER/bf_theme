@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../theme/bf_color.dart';
 import '../theme/config.dart';
 
-class BfTextField extends StatelessWidget {
-  const BfTextField({
+class BFTextField extends StatelessWidget {
+  const BFTextField({
     super.key,
     this.controller,
     this.onChanged,

@@ -22,25 +22,25 @@ class TextFieldsScreen extends StatelessWidget {
                 style: context.theme.textTheme.titleMedium,
               ),
               SizedBox(height: 8),
-              BfTextField(
+              BFTextField(
                 colorPack: BFColorPacks.yellow,
                 fillColor: BFColors.widgetBackground,
                 maxLines: 1,
               ),
               SizedBox(height: 8),
-              BfTextField(
+              BFTextField(
                 colorPack: BFColorPacks.red,
                 fillColor: BFColors.widgetBackground,
                 maxLines: 1,
               ),
               SizedBox(height: 8),
-              BfTextField(
+              BFTextField(
                 colorPack: BFColorPacks.cyan,
                 fillColor: BFColors.widgetBackground,
                 maxLines: 1,
               ),
               SizedBox(height: 8),
-              BfTextField(
+              BFTextField(
                 colorPack: BFColorPacks.lime,
                 fillColor: BFColors.widgetBackground,
                 maxLines: 1,
@@ -59,37 +59,37 @@ class TextFieldsScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.orange,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.blue,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.brown,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.steel,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.gray,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.ash,
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        BfTextField(
+                        BFTextField(
                           colorPack: BFColorPacks.berry,
                           maxLines: 1,
                         ),
