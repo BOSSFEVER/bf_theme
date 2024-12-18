@@ -94,6 +94,12 @@ abstract final class BFColorPacks {
     Color(0xffb76644),
   );
 
+  static const widget = BFColorPack(
+    BFColors.widgetBackground,
+    Color(0xFF303030),
+    Color(0xFF404040),
+  );
+
   static const gray = BFColorPack(
     Color(0xFF444444),
     Color(0xff575757),

@@ -31,6 +31,7 @@ final List<ColorData> colorDataList = [
   ColorData("Gray", BFColorPacks.gray, empty),
   ColorData("Steel", BFColorPacks.steel, empty),
   ColorData("Black", BFColorPacks.black, empty),
+  ColorData("Widget", BFColorPacks.widget, empty),
   ColorData("Disabled", BFColorPacks.black, null),
 ];
 

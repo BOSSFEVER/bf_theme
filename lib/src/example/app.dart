@@ -1,3 +1,4 @@
+import 'package:bf_theme/src/example/text_fields_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'buttons.dart';
@@ -33,8 +34,8 @@ class _AppState extends State<App> {
             label: const Text('Buttons'),
           ),
           NavigationDrawerDestination(
-            icon: Icon(Icons.person),
-            label: const Text('The Rest'),
+            icon: Icon(Icons.format_color_text),
+            label: const Text('Text Input'),
           ),
           NavigationDrawerDestination(
             icon: Icon(Icons.water_drop),
@@ -45,6 +46,7 @@ class _AppState extends State<App> {
       body: SingleChildScrollView(
         child: switch (selected) {
           0 => ButtonsScreen(),
+          1 => TextFieldsScreen(),
           _ => Placeholder(
               strokeWidth: 3,
               color: Colors.green,
